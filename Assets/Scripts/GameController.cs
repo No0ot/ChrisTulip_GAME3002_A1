@@ -11,6 +11,10 @@ public class GameController : MonoBehaviour
     GameObject m_Net = null;
     [SerializeField]
     GameObject m_Goalie = null;
+    [SerializeField]
+    AudioClip m_GoalSound;
+    [SerializeField]
+    AudioClip m_BlockSound;
 
     public bool bBallInPlay;
     public bool bPlayCompelete = false;
@@ -40,6 +44,7 @@ public class GameController : MonoBehaviour
     {
         if (!bPlayCompelete)
         {
+            AudioSource.PlayClipAtPoint(m_BlockSound, transform.position);
             m_NetBehaviour.setLightColor(Color.red);
             numBlocks++;
             bPlayCompelete = true;
@@ -50,6 +55,7 @@ public class GameController : MonoBehaviour
     {
         if (!bPlayCompelete)
         {
+            AudioSource.PlayClipAtPoint(m_GoalSound, transform.position);
             m_NetBehaviour.setLightColor(Color.green);
             numGoals++;
             bPlayCompelete = true;

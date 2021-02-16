@@ -2769,6 +2769,7 @@ MonoBehaviour:
   m_PowerValue: {fileID: 1967210988}
   fDelta: 0
   fTheta: 0
+  m_kickSound: {fileID: 8300000, guid: 07621017461e0b64b9f0f018695241cc, type: 3}
   m_rb: {fileID: 1631043351}
 --- !u!135 &1631043346
 SphereCollider:
@@ -3447,6 +3448,8 @@ MonoBehaviour:
   m_Ball: {fileID: 1631043344}
   m_Net: {fileID: 1446397212}
   m_Goalie: {fileID: 296235716}
+  m_GoalSound: {fileID: 8300000, guid: eb9a1c34c47ece142b9b6166a74e4637, type: 3}
+  m_BlockSound: {fileID: 8300000, guid: 4fba708343aca74449d7e98fe0da28aa, type: 3}
   bBallInPlay: 0
   bPlayCompelete: 0
   numGoals: 0
@@ -3459,7 +3462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090158648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.198843, y: -0.35476017, z: 23.95526}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

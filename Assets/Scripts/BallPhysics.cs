@@ -12,6 +12,8 @@ public class BallPhysics : MonoBehaviour
     float fDelta;
     [SerializeField]
     float fTheta;
+    [SerializeField]
+    AudioClip m_kickSound;
 
     public Rigidbody m_rb = null;
     private GameObject m_TargetDisplay = null;
@@ -54,6 +56,7 @@ public class BallPhysics : MonoBehaviour
 
     public void OnKickBall()
     {
+        AudioSource.PlayClipAtPoint(m_kickSound, transform.position);
         // H = Vi^2 * sin^2(theta) / 2g
         // R = 2Vi^2 * cos(theta) * sin(theta) / g
 
